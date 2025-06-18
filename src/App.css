@@ -6,7 +6,7 @@ body {
   background-size: cover;
   /* para a imagem ficar fixa */
   background-attachment: fixed;
-  color: rgb(0, 11, 61);
+  color: rgb(175, 175, 185);
   /* tamanho da fonte */
   font-size: larger;
 }
@@ -19,7 +19,7 @@ body {
   margin-bottom: 5px;
   /* Arredondamento das bordas */
   border-radius: 20px;
-  background-color: rgb(211, 204, 204);
+  background-color: rgb(246, 242, 242);
   width: 49vw;
   /* DEixar mais transparente */
   filter: opacity(85%);
@@ -33,7 +33,7 @@ body {
 input {
   width: 25vw;
   height: 2vw;
-  background-color: rgb(211, 204, 204);
+  background-color: rgb(46, 40, 99);
 }
 
 button {
