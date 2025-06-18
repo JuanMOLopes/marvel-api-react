@@ -3,19 +3,9 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background-color: #e0e0e0;
   transition: background-color 0.3s;
-}
-
-header h1 {
-  color: #333;
-  font-size: 3rem;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
 }
 
 header a {
