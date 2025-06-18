@@ -76,19 +76,7 @@ function ListaPersonagens() {
             <h3>{heroi.name}</h3>
 
             {/* Botão de favorito que muda de estilo e texto conforme o estado */}
-            <button
-              onClick={() => toggleFavorito(heroi)}
-              style={{
-                marginTop: 8,
-                padding: "6px 12px",
-                backgroundColor: favoritos.some((f) => f.id === heroi.id)
-                  ? "#ffd700"
-                  : "#f0f0f0",
-                border: "1px solid #ccc",
-                borderRadius: 4,
-                cursor: "pointer",
-              }}
-            >
+            <button onClick={() => toggleFavorito(heroi)}>
               {favoritos.some((f) => f.id === heroi.id)
                 ? "Favorito ★"
                 : "Favoritar ☆"}

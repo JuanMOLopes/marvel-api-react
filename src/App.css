@@ -48,3 +48,4 @@ button {
 body.escuro {
  filter: grayscale(1);  /* filtro cinza, sendo o numero 1 a intesidade mais forte */
 }
+
