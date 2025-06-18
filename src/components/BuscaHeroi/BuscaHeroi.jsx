@@ -96,7 +96,7 @@ function BuscaHeroi() {
   
   return (
     <>
-      <h1>MarvelDex</h1>
+    
 
       {/* Formulário de busca */}
       <form onSubmit={fetchHeroi}>    
