@@ -89,6 +89,7 @@ function ListaPersonagens() {
             key={heroi.id}
             style={{
               border: "3px solid #e62429",
+              borderRadius: 8,
               boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
               padding: 16,
               background: "transparent",
@@ -116,6 +117,7 @@ function ListaPersonagens() {
                 padding: "6px 16px",
                 backgroundColor: favoritos.some((f) => f.id === heroi.id)
                   ? "#ffd700"
+                  : "grey",
                   : "#f0f0f0",
                 border: "1px solid #ccc",
                 borderRadius: 4,
