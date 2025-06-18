@@ -67,7 +67,21 @@ function ListaPersonagens() {
     <div className="lista-de-personagens">
       <div style={{ display: "flex", flexWrap: "wrap", gap: 20 }}>
         {personagens.map((heroi) => (
-          <div key={heroi.id}>
+          <div
+            key={heroi.id}
+            style={{
+              border: "3px solid #e62429",
+              borderRadius: 8,
+              boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+              padding: 16,
+              background: "transparent",
+              width: 180,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              transition: "box-shadow 0.2s",
+            }}
+          >
             <img
               src={`${heroi.thumbnail.path}/standard_xlarge.${heroi.thumbnail.extension}`}
               alt={heroi.name}
@@ -82,8 +96,8 @@ function ListaPersonagens() {
                 marginTop: 8,
                 padding: "6px 12px",
                 backgroundColor: favoritos.some((f) => f.id === heroi.id)
-                  ? "#ffd700"  // Amarelo para favoritado
-                  : "#f0f0f0", // Cinza para não favoritado
+                  ? "#ffd700"
+                  : "grey",
                 border: "1px solid #ccc",
                 borderRadius: 4,
                 cursor: "pointer",
