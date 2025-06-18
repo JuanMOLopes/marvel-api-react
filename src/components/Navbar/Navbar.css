@@ -6,14 +6,14 @@ nav {
   justify-content: center;
   gap: 1.5rem;
   padding: 1rem 2rem;
-  background-color: #e0e0e0;
+  background-color: #bfb54a;
   min-height: 15vh;
   transition: background-color 0.3s;
 }
 
 nav a {
   text-decoration: none;
-  color: #333;
+  color: #fff;
   text-align: center;
   text-transform: uppercase;
   font-size: 1rem;
@@ -27,18 +27,4 @@ nav a:hover {
   font-weight: bold;
   background-color: #ccc;
   color: #000;
-}
-
-/* Modo Escuro */
-body.modo-escuro nav {
-  background-color: #152828;
-}
-
-body.modo-escuro nav a {
-  color: #e0e0e0;
-}
-
-body.modo-escuro nav a:hover {
-  background-color: #444;
-  color: #fff;
 }

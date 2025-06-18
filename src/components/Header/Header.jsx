@@ -3,7 +3,7 @@ import "./Header.css";
 import { Link } from "react-router-dom";
 
 import Navbar from "../Navbar/Navbar";
-import LogoSite from "/logo-navegador.png";
+import LogoSite from "/loog-marvel.jpg";
 
 function Header() {
   return (
