@@ -1,0 +1,51 @@
+body {
+  background-image: url("../public/Avengers.jpg");
+  /* Para não aparecer mais de 1 vez a imagem de fundo */
+  background-repeat: no-repeat;
+  /* Ficar atras do conteudo  ecobrindo o fundo todo*/
+  background-size: cover;
+  /* para a imagem ficar fixa */
+  background-attachment: fixed;
+  color: rgb(0, 11, 61);
+  font-family: "Times New Roman";
+  /* tamanho da fonte */
+  font-size: larger;
+}
+
+.Pesquisa {
+  margin-left: 26vw;
+  /* Distancia vertical para cima */
+  margin-top: 5px;
+  /* Distancia vertical para baixo  */
+  margin-bottom: 5px;
+  /* Arredondamento das bordas */
+  border-radius: 20px;
+  background-color: rgb(211, 204, 204);
+  width: 49vw;
+  /* DEixar mais transparente */
+  filter: opacity(85%);
+  align-items: center;
+  text-align: center;
+  /* Distancia dos elementod do container das bordas */
+  padding: 10px;
+}
+
+/* Barra de pesquisa */
+input {
+  width: 25vw;
+  height: 2vw;
+  background-color: rgb(211, 204, 204);
+}
+
+button {
+  /* Decide a cor do botão */
+  background-color: rgb(85, 0, 0);
+  /* Distancia vertical entre um container e algo que esta em cima dele */
+  margin-top: 10px;
+  /* Distancia da esquerda */
+  margin-left: 5px;
+}
+
+body.escuro {
+ filter: grayscale(1);  /* filtro cinza, sendo o numero 1 a intesidade mais forte */
+}
