@@ -126,9 +126,6 @@ function BuscaHeroi() {
             width="200"
           />
 
-
-          {/* Botão para salvar o herói como favorito */}
-          <button onClick={() => setFavoritar(true)}>Favoritar</button>
         </div>
       )}
     </>
