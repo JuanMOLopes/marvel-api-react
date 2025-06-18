@@ -63,41 +63,77 @@ function ListaPersonagens() {
   if (carregando) return <p>Carregando heróis...</p>;
 
   // Renderização da lista de personagens
-  return (
-    <div className="lista-de-personagens">
-      <div style={{ display: "flex", flexWrap: "wrap", gap: 20 }}>
-        {personagens.map((heroi) => (
-          <div key={heroi.id}>
-            <img
-              src={`${heroi.thumbnail.path}/standard_xlarge.${heroi.thumbnail.extension}`}
-              alt={heroi.name}
-              style={{ width: "100%", borderRadius: 8 }}
-            />
-            <h3>{heroi.name}</h3>
-            
-            {/* Botão de favorito que muda de estilo e texto conforme o estado */}
-            <button
-              onClick={() => toggleFavorito(heroi)}
-              style={{
-                marginTop: 8,
-                padding: "6px 12px",
-                backgroundColor: favoritos.some((f) => f.id === heroi.id)
-                  ? "#ffd700"  // Amarelo para favoritado
-                  : "#f0f0f0", // Cinza para não favoritado
-                border: "1px solid #ccc",
-                borderRadius: 4,
-                cursor: "pointer",
-              }}
-            >
-              {favoritos.some((f) => f.id === heroi.id)
-                ? "Favorito ★"  // Texto para favoritado
-                : "Favoritar ☆"} // Texto para não favoritado
-            </button>
-          </div>
-        ))}
-      </div>
+  // ...existing code...
+// ...existing code...
+return (
+  <div
+    className="lista-de-personagens"
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "flex-start",
+      minHeight: "80vh",
+      padding: "48px 0", // Espaço acima e abaixo
+      boxSizing: "border-box",
+      width: "100%",
+    }}
+  >
+    <div
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        gap: 20,
+        justifyContent: "center",
+        maxWidth: 1200,
+        width: "100%",
+      }}
+    >
+      {personagens.map((heroi) => (
+        <div
+          key={heroi.id}
+          style={{
+            border: "3px solid #e62429",
+            boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+            padding: 16,
+            background: "transparent",
+            width: 180,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            transition: "box-shadow 0.2s",
+          }}
+        >
+          <img
+            src={`${heroi.thumbnail.path}/standard_xlarge.${heroi.thumbnail.extension}`}
+            alt={heroi.name}
+            style={{ width: "100%", borderRadius: 8, marginBottom: 8 }}
+          />
+          <h3 style={{ margin: "8px 0 0 0", fontSize: 18, textAlign: "center" }}>{heroi.name}</h3>
+          <button
+            onClick={() => toggleFavorito(heroi)}
+            style={{
+              marginTop: 12,
+              padding: "6px 16px",
+              backgroundColor: favoritos.some((f) => f.id === heroi.id)
+                ? "#ffd700"
+                : "#f0f0f0",
+              border: "1px solid #ccc",
+              borderRadius: 4,
+              cursor: "pointer",
+              fontWeight: "bold",
+              fontSize: 15,
+              transition: "background 0.2s",
+            }}
+          >
+            {favoritos.some((f) => f.id === heroi.id)
+              ? "Favorito ★"
+              : "Favoritar ☆"}
+          </button>
+        </div>
+      ))}
     </div>
-  );
+  </div>
+);
 }
 
 export default ListaPersonagens;
