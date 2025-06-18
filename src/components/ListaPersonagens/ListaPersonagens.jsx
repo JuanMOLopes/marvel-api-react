@@ -26,7 +26,7 @@ function ListaPersonagens() {
   if (carregando) return <p>Carregando heróis...</p>;
 
   return (
-    <div style={{ display: "flex", flexWrap: "wrap", gap: 20 }}>
+    <div style={{ display: "flex", flexWrap: "wrap", gap: 20, marginLeft: 32, marginBottom: 25, marginTop: 25 }}>
       {personagens.map((heroi) => (
         <div
           key={heroi.id}
