@@ -8,10 +8,10 @@ const CHAVE_PRIVADA = "99a4adea344cbba3374ce5c2f66bf756e840ad3d";
 function ListaPersonagens() {
   // estado para armazenar a lista de personagens da api
   const [personagens, setPersonagens] = useState([]);
-  
+
   // estado se diz se os dados estão sendo carregados
   const [carregando, setCarregando] = useState(true);
-  
+
   // estado para os favoritados
   const [favoritos, setFavoritos] = useState(() => {
     // primeiro tentamos pegar a lista salva no local storage
@@ -26,12 +26,12 @@ function ListaPersonagens() {
       setCarregando(true);
       const ts = Date.now().toString();
       const hash = md5(ts + CHAVE_PRIVADA + CHAVE_PUBLICA);
-      
+
       // Chamada à API
       const url = `https://gateway.marvel.com/v1/public/characters?limit=12&ts=${ts}&apikey=${CHAVE_PUBLICA}&hash=${hash}`;
       const resposta = await fetch(url);
       const dados = await resposta.json();
-      
+
       // Atualiza o estado com os resultados
       setPersonagens(dados.data.results);
       setCarregando(false);
@@ -49,7 +49,7 @@ function ListaPersonagens() {
     setFavoritos((prev) => {
       // Verifica se o herói já está favoritado
       const jaFavorito = prev.some((f) => f.id === heroi.id);
-      
+
       // Se já estiver, remove da lista. Se não, adiciona.
       if (jaFavorito) {
         return prev.filter((f) => f.id !== heroi.id);
@@ -74,7 +74,7 @@ function ListaPersonagens() {
               style={{ width: "100%", borderRadius: 8 }}
             />
             <h3>{heroi.name}</h3>
-            
+
             {/* Botão de favorito que muda de estilo e texto conforme o estado */}
             <button
               onClick={() => toggleFavorito(heroi)}
@@ -82,16 +82,16 @@ function ListaPersonagens() {
                 marginTop: 8,
                 padding: "6px 12px",
                 backgroundColor: favoritos.some((f) => f.id === heroi.id)
-                  ? "#ffd700"  // Amarelo para favoritado
-                  : "#f0f0f0", // Cinza para não favoritado
+                  ? "#ffd700"
+                  : "#f0f0f0",
                 border: "1px solid #ccc",
                 borderRadius: 4,
                 cursor: "pointer",
               }}
             >
               {favoritos.some((f) => f.id === heroi.id)
-                ? "Favorito ★"  // Texto para favoritado
-                : "Favoritar ☆"} // Texto para não favoritado
+                ? "Favorito ★"
+                : "Favoritar ☆"}
             </button>
           </div>
         ))}
