@@ -4,7 +4,7 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: #e0e0e0;
+  background-color:#0b052d;
   transition: background-color 0.3s;
 }
 
@@ -16,7 +16,7 @@ header a {
 header img {
   width: 150px;
   height: auto;
-  filter: drop-shadow(0 0 5px #e0e0e0);
+  filter: drop-shadow(0 0 5px #e30f0f);
 }
 
 @media (max-width: 1023px) {
