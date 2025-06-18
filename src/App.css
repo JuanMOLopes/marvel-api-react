@@ -46,7 +46,3 @@ button {
 button:hover {
   background-color: #770000;
 }
-
-body.escuro {
-  filter: grayscale(1);
-}
